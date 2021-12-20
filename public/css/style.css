@@ -1,0 +1,33 @@
+.button {
+	background-color: gray;
+	color: green;
+	border-radius: 5px;
+ }
+
+form {
+    display: inline-block; 
+}
+
+.case {
+    border : 1px solid; 
+    border-radius: 2px;
+}
+
+body{
+    text-align: center;
+}
+.message {
+    font-size:larger;
+    color: black;
+    font-weight: 200;
+}
+
+.tab {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1,h2 {
+    color: midnightblue;
+}

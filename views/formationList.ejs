@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/style.css">
+	<title>Document</title>
+</head>
+<body>
+	<h1>IT ACADEMY</h1>
+	<form action="/formation/basket">
+		<button class='button'>Aller au panier</button>
+		
+	</form>
+	<form action="/formation/connect">
+		<button class='button'> Se connecter</button>
+	</form>
+	<div class="message"><%= Nom %> </div>
+	<h2>Formations disponibles</h2>
+<table class='tab'>
+
+
+
+	<tbody>
+		<tr>
+			<td class='case'>Nom de la formation</td>
+			<td class='case'>Prix</td>
+			<td class='case'>Date de début</td>
+			<td class='case'>Date de fin</td>
+		</tr>
+	<% for( let index = 0; index < formations.length; index++ ) { %>
+	<tr>
+		<td class='case'><%= formations[index].name %> </td>
+		<td class='case'><%= formations[index].price %> </td>
+		<td class='case'><%= formations[index].beginning %> </td>
+		<td class='case'><%= formations[index].end %> </td>
+		<td class='case'><a href="/formation/add/<%= index %> " class='button'>S'inscrire</a></td>
+	</tr>
+	<% } %>
+
+	</tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/style.css">
+	<title>Document</title>
+</head>
+<body>
+	<h1>IT ACADEMY</h1>
+	<form action="/formation">
+		<button class='button'>Retour à la liste des formations</button>
+		
+	</form>
+	<form action="/formation/finalize">
+		<button class='button'>Finaliser l'achat</button>
+	</form>
+<table class="tab">
+	
+	<thead>
+        <tr>
+            <th colspan="5" style="text-align:center">Panier</th>
+        </tr>
+    </thead>
+
+	<tbody>
+		<tr>
+			<td class='case'>Nom de la formation</td>
+			<td class='case'>Prix</td>
+			<td class='case'>Date de début</td>
+			<td class='case'>Date de fin</td>
+		</tr>
+	<% for( let index = 0; index < basket.length; index++ ) { %>
+	<tr>
+		<td class='case'><%= basket[index].name %> </td>
+		<td class='case'><%= basket[index].price %> </td>
+		<td class='case'><%= basket[index].beginning %> </td>
+		<td class='case'><%= basket[index].end %> </td>
+		<td class='case'><a href="/formation/delete/<%= index %> " class='button'>Se désincrire</a></td>
+	</tr>
+	<% } %>
+</tbody>
+</table>
+
+</body>
+</html>
